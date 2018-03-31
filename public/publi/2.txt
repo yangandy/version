@@ -1,0 +1,123 @@
+
+Building configuration...
+Current configuration : 1571 bytes
+
+!
+version RGNOS 10.2.00(2), Release(27932)(Thu Dec 13 10:31:41 CST 2007 -ngcf32)
+
+!
+!
+!
+vlan 1
+!
+vlan 10
+!
+vlan 20
+!
+vlan 30
+!
+vlan 40
+!
+vlan 50
+!
+vlan 70
+!
+!
+no service password-encryption
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+spanning-tree
+spanning-tree mst configuration
+ instance 0 vlan 1-9, 11-19, 21-29, 31-39, 41-4094
+ instance 1 vlan 10, 20
+ instance 2 vlan 30, 40
+spanning-tree mst 1 priority 4096
+interface FastEthernet 0/1
+ no switchport
+ ip address 192.168.1.20 255.255.255.0
+!
+interface FastEthernet 0/2
+!
+interface FastEthernet 0/3
+!
+interface FastEthernet 0/4
+!
+interface FastEthernet 0/5
+!
+interface FastEthernet 0/6
+!
+interface FastEthernet 0/7
+!
+interface FastEthernet 0/8
+!
+interface FastEthernet 0/9
+!
+interface FastEthernet 0/10
+!
+interface FastEthernet 0/11
+!
+interface FastEthernet 0/12
+!
+interface FastEthernet 0/13
+!
+interface FastEthernet 0/14
+!
+interface FastEthernet 0/15
+!
+interface FastEthernet 0/16
+!
+interface FastEthernet 0/17
+!
+interface FastEthernet 0/18
+!
+interface FastEthernet 0/19
+!
+interface FastEthernet 0/20
+!
+interface FastEthernet 0/21
+!
+interface FastEthernet 0/22
+!
+interface FastEthernet 0/23
+!
+interface FastEthernet 0/24
+!
+interface GigabitEthernet 0/25
+ port-group 1
+!
+interface GigabitEthernet 0/26
+ port-group 1
+!
+interface GigabitEthernet 0/27
+ port-group 1
+!
+interface GigabitEthernet 0/28
+ port-group 1
+!
+interface AggregatePort 1
+ switchport mode trunk
+!
+!
+!
+!
+!
+line con 0
+line vty 0 4
+ login
+!
+!
+!
+!
+!
+end
